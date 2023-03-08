@@ -1,0 +1,83 @@
+% ===================================
+% resume.sty
+% Author: hexWars
+% Version: 1.0.0
+% Date: 2023-03-08
+% Description: 自定义的sty
+% ===================================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{resume}[2023/03/06 v1.0 My LaTeX package]
+
+% ===================================
+% 文档类的设置
+% ===================================
+
+% 字体大小和行间距
+\RequirePackage{etoolbox}
+
+% 字体
+\RequirePackage{setspace}
+
+% 修改\section
+\RequirePackage{titlesec}
+% 修改section的格式
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+% 修改section横线位置,上间距和下间距
+\titlespacing{\section}{-5pt}{0pt}{8pt}
+
+% 页面布局
+\RequirePackage[a4paper]{geometry}
+\geometry{
+    textwidth=1380mm,
+    textheight=2150mm,
+    left=18mm,
+    right=18mm,
+    top=13.4mm,
+    bottom=13.4mm,
+    headheight=2.17cm,
+    headsep=4mm,
+    footskip=12mm,
+    heightrounded,
+}
+
+% 超链接颜色修改
+\RequirePackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+% ===================================
+% 自定义命令
+% ===================================
+
+% \newcommand{\resumeSubItem}[4]{
+%   \vspace{-1pt}\item
+%     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%       \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+%       \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+%     \end{tabular*}\vspace{-4pt}
+% }
+
+
+% 使用了tabular*，四个参数，可以用于不少地方
+\newcommand{\resumeTable}[4]{
+    \vspace{-5pt}
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{darkgray} #2} \\
+      \textit{#3} & {\color{darkgray} #4}
+    \end{tabular*}
+    \vspace{-2pt}
+}
+
+
+% ===================================
+% sty的说明和解释
+%  /\_/\
+% ( o o )
+%  > ^ <
+% ===================================
+% 这是一个自定义的sty文件，提供了一些命令和设置用于简化latex简历的编写
+% 有问题请联系作者
+% 项目地址：https://github.com/hexWars/resume
+
+

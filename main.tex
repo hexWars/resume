@@ -1,0 +1,221 @@
+% ===================================
+% resume.sty
+% Author: hexWars
+% Version: 1.0.0
+% Date: 2023-03-08
+% Description: 个人简历
+%  /\_/\
+% ( o o )
+%  > ^ <
+% ===================================
+
+
+\documentclass[a4paper]{article}
+
+
+% 数学公式
+\usepackage{amsmath}
+% 插图
+\usepackage{graphicx}
+% 颜色
+\usepackage{xcolor}
+% 表格
+\usepackage{array}
+% 字体
+\usepackage{fontspec}
+% 中文
+\usepackage[UTF8]{ctex}
+% fontawesome图标
+\usepackage{fontawesome5}
+% 修改\section
+\usepackage{titlesec}
+% 字体大小和行间距
+\usepackage{etoolbox}
+% 字体格式修改
+\usepackage{setspace}
+% 画图
+% \usepackage{tikz}
+% % 修改页面样式
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+% 页面布局
+\usepackage[a4paper]{geometry}
+% 超链接颜色修改
+\usepackage[unicode, draft=false]{hyperref}
+
+% 引入自定义包
+\usepackage{resume}
+
+
+% ===================================
+% 简历正文
+% ===================================
+
+\begin{document}
+
+% 去掉页码
+\pagestyle{empty}
+% 去除缩进,article的正文每段会默认缩进
+\setlength{\parindent}{0pt}
+
+% 修改字体大小和行间距
+{\fontsize{9pt}{7pt}\selectfont
+
+% ===================================
+% 社交信息
+% ===================================
+
+\begin{center}
+    \textbf{\Huge 克莱恩} \\ 
+    \vspace{5pt} % 行间距
+    \hspace{10pt}
+    \href{tel:+8600000000000}{\faPhoneVolume \ 00000000000} | 
+    \href{weixin:666}{\faWeixin \ 666} | 
+    \href{https://github.com}{\faGithub \ github}  | 
+    \href{mailto:email}{\faEnvelope \ e-mail} | 
+    \href{https://blog.xxx.xxx/}{\faRss \ blog.xxx.xxx}
+    \vspace{-5pt}
+\end{center}
+
+%-------------------------------------------------------------------------------
+%	教育经历
+%-------------------------------------------------------------------------------
+
+\ignorespaces
+\section{\textbf{教育经历}}
+    \resumeTable
+    {霍格沃兹}{2019年9月 -- 2023年6月}
+    {软件工程 \ 本科 \ 信息技术学院}{GPA:3.5(前\%5)}
+
+%-------------------------------------------------------------------------------
+%	专业技能
+%-------------------------------------------------------------------------------
+
+\section{\textbf{专业技能}}
+
+    \textbullet 精通常见数据结构及算法，具有良好的编程习惯 \\
+    \textbullet 精通SpringBoot和Node.js进行后台开发 \\
+    \textbullet 精通Linux等操作系统的使用 \\
+    \textbullet 精通HTML，CSS，JavaScript的使用 \\
+    \textbullet 精通JSP，Thymeleaf，FreeMarker等模板引擎 \\
+    \textbullet 精通DevOps \\
+    \textbullet 精通各种消息队列 \\
+    \textbullet 精通Mysql和Redis等数据库 \\
+    \textbullet 精通Java，Go等后端语言 \\
+    \textbullet 精通Vue,React等前端框架 \\
+
+    大一开始在CSDN发表技术文章，至今约300篇，浏览量约13w，全站排名最高约\textbf{5000}， \href{https://blog.csdn.net}{博客地址}
+
+%-------------------------------------------------------------------------------
+%	荣誉奖项
+%-------------------------------------------------------------------------------
+
+\section{\textbf{荣誉奖项}}
+
+    \textbullet 大学生创新创业项目（国家级）两项 \\
+    \textbullet 专业一等奖学金（三次），校优秀学生干部（一次） \\
+    \textbullet 某大学XX校区“互联网++”大学生创新创业大赛“红旅创意组”金奖 \hfill 2022年6月 \\
+    \textbullet 国家软件著作权登记证书（一项）\hfill 2022年5月 \\
+    \textbullet 十三届蓝桥杯省赛一等奖 \hfill 2022年4月 \\
+    \textbullet 某比赛满分（1/982） \hfill 2021年12月 \\
+    \textbullet 第九届“逐鹿今朝”大学生创业计划竞赛（校赛）三等奖 \hfill 2021年12月 \\
+    \textbullet （第三届）算法设计与编程挑战赛（秋季赛）个人赛组银奖 \hfill 2021年11月
+
+\ignorespaces
+
+%-------------------------------------------------------------------------------
+%	社团和组织经历
+%-------------------------------------------------------------------------------
+
+\section{\textbf{社团和组织经历}}
+    
+    \resumeTable
+    {程序设计爱好者协会}{2020年10月 -- 2021年10月}
+    {会长}{}
+    负责校内程序设计竞赛的出题和测题以及协会招新，协助学院举办XXX大赛等多项大型活动
+
+    \vspace{2pt} 同时管理宣传部，技术部，竞赛部，组织部近40人，任期结束时在学生社团评比中所在社团获得总评\textbf{第一}的成绩 
+
+
+%-------------------------------------------------------------------------------
+%	实习经验
+%-------------------------------------------------------------------------------
+
+\section{\textbf{实习经验}}
+    \resumeTable
+    {XXX研发中心}{2000年2月 -- 2020年2月}
+    {后端工程师}{北京}
+    
+    \begin{minipage}{17cm}\vspace{2pt}
+        \textbf{工作描述：}本项目针对XXX的场景进行开发工作，其中包括发布删除修改查找，指定信息展示，分类目录，登录模块权限管理，登录日志等功能。从数据库表设计开始，文章管理和目录分类接口的实现 ，最后打包成Docker镜像方便以Docker方式部署
+    \end{minipage}
+
+    \vspace{7pt}% 修改行间距
+
+    \resumeTable
+    {XXX公司}{2023年2月 -- 至今}
+    {后端工程师}{广州}
+    
+    \begin{minipage}{17cm}\vspace{2pt}
+        \textbf{工作描述：}本项目针对XXX的场景进行开发工作，其中包括发布删除修改查找，指定信息展示，分类目录，登录模块权限管理，登录日志等功能。从数据库表设计开始，文章管理和目录分类接口的实现 ，最后打包成Docker镜像方便以Docker方式部署
+    \end{minipage}
+
+%-------------------------------------------------------------------------------
+%	项目经历
+%-------------------------------------------------------------------------------
+
+\section{\textbf{项目经历}}
+    \resumeTable
+    {XXX系统}{2021年10月 -- 2021年11月}
+    {全栈开发}{}
+    \begin{minipage}{17cm}\vspace{2pt}
+        \textbf{技术选型：}Node.js+Express+EJS+Mysql+Docker
+    \end{minipage}
+    
+
+    \begin{minipage}{17cm}\vspace{2pt}
+        \textbf{项目描述：}本项目针对XXX的场景进行开发工作，其中包括发布删除修改查找，指定信息展示，分类目录，登录模块权限管理，登录日志等功能。从数据库表设计开始，文章管理和目录分类接口的实现 ，最后打包成Docker镜像方便以Docker方式部署
+    \end{minipage}
+
+    \begin{minipage}{17cm}\vspace{2pt}
+        \textbf{职责描述：}负责项目的总体设计，参考XXX进行原型设计，完成XXX代码，并制作Docker镜像上传
+    \end{minipage}
+
+    \vspace{7pt}% 修改行间距
+
+    \resumeTable
+    {XXX系统}{2021年10月 -- 2021年11月}
+    {全栈开发}{}
+    \begin{minipage}{17cm}\vspace{2pt}
+        \textbf{技术选型：}Node.js+Express+EJS+Mysql+Docker
+    \end{minipage}
+    
+
+    \begin{minipage}{17cm}\vspace{2pt}
+        \textbf{项目描述：}本项目针对XXX的场景进行开发工作，其中包括发布删除修改查找，指定信息展示，分类目录，登录模块权限管理，登录日志等功能。从数据库表设计开始，文章管理和目录分类接口的实现 ，最后打包成Docker镜像方便以Docker方式部署
+    \end{minipage}
+
+    \begin{minipage}{17cm}\vspace{2pt}
+        \textbf{职责描述：}负责项目的总体设计，参考XXX进行原型设计，完成XXX代码，并制作Docker镜像上传
+    \end{minipage}
+
+
+
+%-------------------------------------------------------------------------------
+%	自我评价
+%-------------------------------------------------------------------------------
+
+
+\section{\textbf{自我评价}}
+执着，喜欢思考，爱好广泛，拥有冷静的内心和炽热的灵魂，独特的思维角度 \\
+从第一次AC开始，从第一次发博客开始，在思考中不断学习，希望能和更加优秀的人一起共事 \\
+热爱开源，热爱技术，对代码的美感深深的吸引
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
