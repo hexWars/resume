@@ -2,6 +2,11 @@ todo：尝试用typst写一遍)
 
 我看了一下语法好简单的...
 
+大概写出来是这样，不过还没加颜色，有点意思
+
+![preview](./assets/typst-resume-test.png)
+
+
 ---
 
 一个适合中文的，简单的latex简历模板
@@ -24,7 +29,7 @@ todo：尝试用typst写一遍)
 
 # Preview
 
-![preview](./latex/main.png)
+![preview](./assets/latex-resume.png)
 
 # License
 Format is MIT but all the data is owned by hexWars
