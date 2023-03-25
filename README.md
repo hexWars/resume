@@ -1,3 +1,8 @@
+todo：尝试用typst写一遍)
+
+我看了一下语法好简单的...
+
+---
 
 一个适合中文的，简单的latex简历模板
 
@@ -19,7 +24,7 @@
 
 # Preview
 
-![preview](./main.png)
+![preview](./latex/main.png)
 
 # License
 Format is MIT but all the data is owned by hexWars
