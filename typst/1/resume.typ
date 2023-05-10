@@ -1,13 +1,12 @@
 // 颜色
-#let self_color = rgb("#3E0C87")
-
+#let self_color = rgb("#000080")
+// #000080 #008080 #4B0082
 #let header(
   name: "",
   links: (),
   body,
 ) = {
 
-  // set document(author: links.map(a => a.name), title: title)
   set page(margin: (left: 15mm, right: 15mm, top: 15mm, bottom: 15mm))
   set text(font: "Linux Libertine", lang: "zh")
 
@@ -23,7 +22,7 @@
   pad(
     top: 0.3em,
     bottom: 0.3em,
-    x: 0.2em,
+    x: 3.2em,
     grid(
       columns: (1fr,) * calc.min(5, links.len()),
       gutter: 1em,
@@ -44,14 +43,15 @@
 #let resume_section(title) = {
   set text(
     size: 16pt,
-    weight: "regular"
+    weight: "regular",
+    fill: self_color
   )
   align(left)[
     #smallcaps[
       // #text[#title.slice(0, 3)]#strong[#text[#title.slice(3)]]
       #strong[#text[#title]]
     ]
-    #box(width: 1fr, line(length: 100%))
+    #box(width: 1fr, line(length: 100%, stroke: self_color))
   ]
 }
 
@@ -97,6 +97,18 @@
       #resume_degree[#degree]
     ][
       #resume_time[#time_frame]
+    ]
+  ]
+}
+
+#let line_item(item, time) = {
+  set block(above: 0.7em, below: 0.7em)
+  set pad(top: 5pt)
+  pad[
+    #justify_align[
+      #item
+    ][
+      #time
     ]
   ]
 }
