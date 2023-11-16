@@ -16,6 +16,8 @@
 
 常用的SVG文件已经存在于文件夹`typst`中，模板文件为`typst/resume.typ`，在`typst/main.typ`文件中输入你的简历内容。
 
+你可以将本项目下载，在typst网站上传`typst`文件夹后使用
+
 ### 修改页面参数
 
 ```typst

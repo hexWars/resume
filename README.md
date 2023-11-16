@@ -18,6 +18,8 @@ This project is a resume template designed using Typst and inspired by [this web
 
 The commonly used SVG files are already in the folder `typst`, and the template file is `typst/resume.typ`. Enter your resume content in the file `typst/main.typ`.
 
+You can download this project and upload the `typst` folder to the typst website for use.
+
 ### Update page parameters
 
 ```typst
